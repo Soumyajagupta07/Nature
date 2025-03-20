@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainPic.css';
+import '../styles/mainPic.css';
 
 function MainPic() {
   return (
