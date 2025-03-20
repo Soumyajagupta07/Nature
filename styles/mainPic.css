@@ -1,0 +1,20 @@
+.mainPic img {
+    position: relative;
+    width: 78%;
+    height: auto;
+    float: left;
+    padding: 7px 5px 5px 5px;
+}
+
+.overview {
+    position: absolute;
+    top: 270px;
+    left: 400px;
+    width: 25%;
+    height: auto;
+}
+
+.overview p {
+    font-size: 2em;
+    font-family: Segoe Print;
+}

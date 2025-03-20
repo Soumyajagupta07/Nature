@@ -1,0 +1,48 @@
+footer {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+}
+
+.follow {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: -20px 0 0 0;
+}
+
+.footer p {
+    padding-left: 50px;
+}
+
+.support {
+    width: 100%;
+    height: auto;
+    margin: -17px 0 0 0;
+    padding: 0px;
+}
+
+.support ul, h3 {
+    padding-left: 30px;
+}
+
+.account {
+    width: 100%;
+    height: auto;
+    margin: -17px 0 0 0;
+}
+
+.account ul, h3 {
+    padding-left: 30px;
+}
+
+.useful {
+    width: 100%;
+    height: auto;
+    margin: -17px 0 0 0;
+}
+
+.useful ul, h3 {
+    padding-left: 30px;
+}
