@@ -1,52 +1,51 @@
 import React from 'react';
 import '../styles/footer.css';
 import AllLogo from '../images/Logo/AllLogo.jpg';
-import visaLogo from '../images/Logo/visaLogo.jpg'
+import visaLogo from '../images/Logo/visaLogo.jpg';
+
+const footerData = [
+  {
+    title: 'Follow Us',
+    content: (
+      <>
+        <img src={AllLogo} alt="logo" /><br />
+        We also accept:<br /><br />
+        <img src={visaLogo} alt="visaLogo" />
+      </>
+    ),
+  },
+  {
+    title: 'Support',
+    links: ['Home', 'Products available', 'About Us', 'Contact us', 'Feedback'],
+  },
+  {
+    title: 'My Accounts',
+    links: ['My account', 'My orders', 'My credit slips', 'My addresses', 'My personnel information'],
+  },
+  {
+    title: 'Useful Links',
+    links: ['Specials', 'New Products', 'Best sellers', 'Our store(s)!', 'Contact us', 'Shipping and Delivery policy', 'Privacy Policy', 'Frequently Asked Questions', 'Terms and Conditions of Use'],
+  },
+];
 
 function Footer() {
   return (
     <footer>
       <div className="followSupportAccountLinks">
-        <div className="section">
-          <h3>Follow Us</h3>
-          <p><img src={AllLogo} alt="logo" /><br />
-            We also accept:<br /><br />
-            <img src={visaLogo} alt="visaLogo" /></p>
-        </div>
-        <div className="section">
-          <h3>Support</h3>
-          <ul>
-            <li>Home</li>
-            <li>Products available</li>
-            <li>About Us</li>
-            <li>Contact us</li>
-            <li>Feedback</li>
-          </ul>
-        </div>
-        <div className="section">
-          <h3>My Accounts</h3>
-          <ul>
-            <li>My account</li>
-            <li>My orders</li>
-            <li>My credit slips</li>
-            <li>My addresses</li>
-            <li>My personnel information</li>
-          </ul>
-        </div>
-        <div className="section">
-          <h3>Useful Links</h3>
-          <ul>
-            <li>Specials</li>
-            <li>New Products</li>
-            <li>Best sellers</li>
-            <li>Our store(s)!</li>
-            <li>Contact us</li>
-            <li>Shipping and Delivery policy</li>
-            <li>Privacy Policy</li>
-            <li>Frequently Asked Questions</li>
-            <li>Terms and Conditions of Use</li>
-          </ul>
-        </div>
+        {footerData.map((section, index) => (
+          <div className="section" key={index}>
+            <h3>{section.title}</h3>
+            {section.content ? (
+              <p>{section.content}</p>
+            ) : (
+              <ul>
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>{link}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
       </div>
       <div className="copyright">
         <h3>©2017 Nature's Paradise, All rights reserved.</h3>

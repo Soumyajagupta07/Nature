@@ -1,36 +1,16 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Product from './components/Product';
 import Menu from './components/Menu';
+import MainPic from './components/MainPic';
+import Contact from './components/Contact';
+import Feedback from './components/Feedback';
 import Footer from './components/Footer';
-import './App.css';
+import Product from './components/Product';
+// import ProductDetail from './components/ProductDetail';
+import About from './components/About';
+import LoginPage from './components/login'; 
 import appleBonsai from './images/Bonsai/Apple1.jpg';
 import mangoBonsai from './images/Bonsai/Mango.jpg';
 import grapeBonsai from './images/Bonsai/Grapes.jpg';
@@ -40,40 +20,57 @@ import azaleaBonsai from './images/Bonsai/Azalea.jpg';
 import mandarinCoolieHatBonsai from './images/Bonsai/MandarinCoolieHat.jpg';
 import hibiscusBonsai from './images/Bonsai/Hibiscus.jpg';
 
+const products = [
+  { image: appleBonsai, name: "Apple", link: "/appleBonsai" },
+  { image: mangoBonsai, name: "Mango", link: "/mangoBonsai" },
+  { image: grapeBonsai, name: "Grape", link: "/grapeBonsai" },
+  { image: orangeBonsai, name: "Orange", link: "/orangeBonsai" },
+  { image: bodhiBonsai, name: "Bodhi", link: "/bodhiBonsai" },
+  { image: azaleaBonsai, name: "Azalea", link: "#" },
+  { image: mandarinCoolieHatBonsai, name: "MandarinCoolieHat", link: "#" },
+  { image: hibiscusBonsai, name: "Hibiscus", link: "#" },
+];
+
+const routes = [
+  { path: "/appleBonsai", element: <Product name="Apple Bonsai" image={appleBonsai} /> },
+  { path: "/mangoBonsai", element: <Product name="Mango Bonsai" image={mangoBonsai} /> },
+  { path: "/grapeBonsai", element: <Product name="Grape Bonsai" image={grapeBonsai} /> },
+  { path: "/orangeBonsai", element: <Product name="Orange Bonsai" image={orangeBonsai} /> },
+  { path: "/bodhiBonsai", element: <Product name="Bodhi Bonsai" image={bodhiBonsai} /> },
+];
 
 const App = () => (
-  <div className="container">
-    <Header />
-    <Nav />
-    {/* <div className="menu">
-      <p>PRODUCT CATEGORIES</p>
-      <a className="links" href="/bonsai">Bonsai</a>
-      <a className="links" href="#">Flower saplings</a>
-      <a className="links" href="#">Fruit saplings</a>
-      <a className="links" href="#">Organic manure</a>
-      <a className="links" href="#">Gardening tools</a>
-      <a className="links" href="#">Vegetable saplings</a>
-      <a className="links" href="#">Fruit seeds</a>
-      <a className="links" href="#">Vegetable seeds</a>
-      <a className="links" href="#">Special Offers</a>
-    </div> */}
-    <Menu/>
-    <div className="productsAvailable">
-      <h2>Products Available</h2>
-      <h3>Bonsai</h3>
+  <Router>
+    <div className="container">
+      <Header />
+      <Nav />
+      <Menu />
+      <MainPic />
+      <Routes>
+        <Route path="/" element={
+          <div>
+            <div className="productsAvailable">
+              <h2>Products Available</h2>
+              <h3>Bonsai</h3>
+            </div>
+            <div className="bonsai">
+              {products.map((product, index) => (
+                <Product key={index} image={product.image} name={product.name} link={product.link} />
+              ))}
+            </div>
+          </div>
+        } />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} /> 
+        <Route path="/feedback" element={<Feedback />} />
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
+      <Footer />
     </div>
-    <div className="bonsai">
-      <Product image={appleBonsai} name="Apple" link="/appleBonsai" />
-      <Product image={mangoBonsai} name="Mango" link="/mangoBonsai" />
-      <Product image={grapeBonsai} name="Grape" link="/grapeBonsai" />
-      <Product image={orangeBonsai} name="Orange" link="/orangeBonsai" />
-      <Product image={bodhiBonsai} name="Bodhi" link="/bodhiBonsai" />
-      <Product image={azaleaBonsai} name="Azalea" link="#" />
-      <Product image={mandarinCoolieHatBonsai} name="MandarinCoolieHat" link="#" />
-      <Product image={hibiscusBonsai} name="Hibiscus" link="#" />
-    </div>
-    <Footer />
-  </div>
+  </Router>
 );
 
 export default App;
