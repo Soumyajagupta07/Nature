@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Menu from './components/Menu';
@@ -8,9 +9,10 @@ import Contact from './components/Contact';
 import Feedback from './components/Feedback';
 import Footer from './components/Footer';
 import Product from './components/Product';
-// import ProductDetail from './components/ProductDetail';
 import About from './components/About';
 import LoginPage from './components/login'; 
+import Home from './components/Home'; 
+import Cart from './components/Cart';
 import appleBonsai from './images/Bonsai/Apple1.jpg';
 import mangoBonsai from './images/Bonsai/Mango.jpg';
 import grapeBonsai from './images/Bonsai/Grapes.jpg';
@@ -39,7 +41,10 @@ const routes = [
   { path: "/bodhiBonsai", element: <Product name="Bodhi Bonsai" image={bodhiBonsai} /> },
 ];
 
-const App = () => (
+const App = () => {
+  
+    const [cartItems, setCartItems] = useState(products);
+  return(
   <Router>
     <div className="container">
       <Header />
@@ -47,23 +52,12 @@ const App = () => (
       <Menu />
       <MainPic />
       <Routes>
-        <Route path="/" element={
-          <div>
-            <div className="productsAvailable">
-              <h2>Products Available</h2>
-              <h3>Bonsai</h3>
-            </div>
-            <div className="bonsai">
-              {products.map((product, index) => (
-                <Product key={index} image={product.image} name={product.name} link={product.link} />
-              ))}
-            </div>
-          </div>
-        } />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} /> 
         <Route path="/feedback" element={<Feedback />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
@@ -71,6 +65,7 @@ const App = () => (
       <Footer />
     </div>
   </Router>
-);
+  )
+};
 
 export default App;

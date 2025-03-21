@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/nav.css';
 
 function Nav() {
@@ -6,26 +7,26 @@ function Nav() {
     <div className="nav">
       <nav>
         <ul>
-          <li><a href="index.html">HOME</a></li>
+          <li><Link to="/">HOME</Link></li>
           <li>
             <div className="dropdown">
-              <a href="products.html"><button className="dropbtn">PRODUCTS</button></a>
+              <Link to="/products"><button className="dropbtn">PRODUCTS</button></Link>
               <div className="dropdown-content">
-                <a href="bonsai.html">Bonsai</a>
-                <a href="#">Flower saplings</a>
-                <a href="#">Fruit saplings</a>
-                <a href="#">Organic manure</a>
-                <a href="#">Gardening tools</a>
-                <a href="#">Vegetable saplings</a>
-                <a href="#">Fruit seeds</a>
-                <a href="#">Vegetable seeds</a>
-                <a href="#">Special Offers</a>
+                <Link to="/bonsai">Bonsai</Link>
+                <Link to="#">Flower saplings</Link>
+                <Link to="#">Fruit saplings</Link>
+                <Link to="#">Organic manure</Link>
+                <Link to="#">Gardening tools</Link>
+                <Link to="#">Vegetable saplings</Link>
+                <Link to="#">Fruit seeds</Link>
+                <Link to="#">Vegetable seeds</Link>
+                <Link to="#">Special Offers</Link>
               </div>
             </div>
           </li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">CONTACT US</a></li>
-          <li><a href="#">FEEDBACK</a></li>
+          <li><Link to="/about">ABOUT US</Link></li>
+          <li><Link to="/contact">CONTACT US</Link></li>
+          <li><Link to="/feedback">FEEDBACK</Link></li>
         </ul>
       </nav>
     </div>
@@ -33,6 +34,7 @@ function Nav() {
 }
 
 export default Nav;
+
 // import React from 'react';
 // import { Link } from 'react-router-dom';
 // import '../styles/nav.css';

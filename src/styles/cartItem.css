@@ -1,0 +1,27 @@
+.cartItem {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .cartItemImage {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .cartItemDetails {
+    flex: 1;
+  }
+  
+  .cartItemDetails h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .cartItemDetails p {
+    margin: 5px 0;
+  }
