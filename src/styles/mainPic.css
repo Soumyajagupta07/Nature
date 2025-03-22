@@ -73,8 +73,9 @@
   }
   
   .overview p {
-    font-size: 2em;
-    font-family: Segoe Print;
+    font-size: 1.2em;
+    /* font-family: Segoe Print; */
+    font-family: Garden Sans;
   }
   
   /* Additional styles for responsiveness */

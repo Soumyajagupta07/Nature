@@ -57,6 +57,14 @@
     font-size: 1.6em;
 }
 
+.header .fa-shopping-cart {
+    font-size: 4.5em;
+    color: black;
+    float: left;
+    margin-right: 10px;
+    padding-top: 24px;
+}
+
 /* .header {
     background: url("../images/Nature/leavesFinal.jpg") no-repeat center center;
     background-size: cover;
@@ -95,3 +103,67 @@
     color: #FFEA00;
     padding: 15px 25px;
 } */
+/* * {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background: url("../images/Nature/leavesFinal.jpg") no-repeat center center;
+    background-size: cover;
+    border-bottom: 2px solid #64DD17;
+    padding: 10px;
+}
+
+.header img {
+    width: 6%;
+    height: auto;
+    border: 2px solid #2E7D32;
+    margin: 9px 3px 3px 130px;
+}
+
+.header h2 {
+    font-size: 2.2em;
+    font-family: 'Monotype Corsiva', cursive;
+    padding: 0 10px;
+    margin: 5px 0;
+    color: #64DD17;
+    white-space: nowrap;
+}
+
+.header span {
+    font-family: 'Gabriola', sans-serif;
+    font-size: 0.7em;
+    margin: -5px 10px 0 100px;
+    padding: -2px 10px 0 5px;
+    font-weight: normal;
+    color: #FFEA00;
+    white-space: nowrap;
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons a {
+    text-decoration: none;
+    color: #FFEA00;
+    padding: 15px 25px;
+    font-family: 'Gabriola', sans-serif;
+    font-size: 1.6em;
+}
+
+.header .fa-shopping-cart {
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+} */
+
+.cartlogin{
+    padding-top: 21px;
+}
