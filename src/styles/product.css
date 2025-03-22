@@ -1,0 +1,52 @@
+.productsAvailable {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .productsAvailable h2 {
+    font-size: 2em;
+    color: #4CAF50;
+  }
+  
+  .productsAvailable h3 {
+    font-size: 1.5em;
+    color: #388E3C;
+  }
+  
+  .bonsai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .bonsai > div {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bonsai img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .bonsai h3 {
+    font-size: 1.2em;
+    color: #2E7D32;
+    margin: 10px 0;
+  }
+  
+  .bonsai a {
+    text-decoration: none;
+    color: #1E88E5;
+    font-weight: bold;
+  }
+  
+  .bonsai a:hover {
+    text-decoration: underline;
+  }
