@@ -49,8 +49,10 @@ const App = () => {
     <div className="container">
       <Header />
       <Nav />
+      <div className='MenuMainPic'>
       <Menu />
       <MainPic />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
