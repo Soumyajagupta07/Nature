@@ -2,8 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import '../styles/cart.css';
+import Menu from './Menu';
 
 const Cart = ({ cartItems = [] }) => {
+  <Menu/>
   const navigate = useNavigate();
 
   const handleCheckout = () => {

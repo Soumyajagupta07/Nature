@@ -12,8 +12,10 @@ const LoginPage = () => {
   };
 
   return (
+    <div className='main'>
+    <Menu/>
     <div className="loginBlock">
-      <Menu/>
+      
       <h3>AUTHENTICATION</h3>
       <div className="createAccount">
         <form>
@@ -35,6 +37,7 @@ const LoginPage = () => {
           <p><input type="submit" value="Login" /></p>
         </form>
       </div>
+    </div>
     </div>
   );
 };
