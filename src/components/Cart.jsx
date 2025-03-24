@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import '../styles/cart.css';
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems = [] }) => {
   const navigate = useNavigate();
 
   const handleCheckout = () => {

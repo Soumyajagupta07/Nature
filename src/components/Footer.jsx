@@ -1,4 +1,7 @@
+
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/footer.css';
 import AllLogo from '../images/Logo/AllLogo.jpg';
 import visaLogo from '../images/Logo/visaLogo.jpg';
@@ -16,19 +19,47 @@ const footerData = [
   },
   {
     title: 'Support',
-    links: ['Home', 'Products available', 'About Us', 'Contact us', 'Feedback'],
+    links: [
+      { name: 'Home', path: '/' },
+      { name: 'Products available', path: '/products' },
+      { name: 'About Us', path: '/about' },
+      { name: 'Contact us', path: '/contact' },
+      { name: 'Feedback', path: '/feedback' },
+    ],
   },
   {
     title: 'My Accounts',
-    links: ['My account', 'My orders', 'My credit slips', 'My addresses', 'My personnel information'],
+    links: [
+      { name: 'My account', path: '/account' },
+      { name: 'My orders', path: '/orders' },
+      { name: 'My credit slips', path: '/credit-slips' },
+      { name: 'My addresses', path: '/addresses' },
+      { name: 'My personnel information', path: '/personal-info' },
+    ],
   },
   {
     title: 'Useful Links',
-    links: ['Specials', 'New Products', 'Best sellers', 'Our store(s)!', 'Contact us', 'Shipping and Delivery policy', 'Privacy Policy', 'Frequently Asked Questions', 'Terms and Conditions of Use'],
+    links: [
+      { name: 'Specials', path: '/specials' },
+      { name: 'New Products', path: '/new-products' },
+      { name: 'Best sellers', path: '/best-sellers' },
+      { name: 'Our store(s)!', path: '/stores' },
+      { name: 'Contact us', path: '/contact' },
+      { name: 'Shipping and Delivery policy', path: '/shipping-policy' },
+      { name: 'Privacy Policy', path: '/privacy-policy' },
+      { name: 'Frequently Asked Questions', path: '/faq' },
+      { name: 'Terms and Conditions of Use', path: '/terms' },
+    ],
   },
 ];
 
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <footer>
       <div className="followSupportAccountLinks">
@@ -40,7 +71,9 @@ function Footer() {
             ) : (
               <ul>
                 {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>{link}</li>
+                  <li key={linkIndex} onClick={() => handleNavigation(link.path)}>
+                    {link.name}
+                  </li>
                 ))}
               </ul>
             )}

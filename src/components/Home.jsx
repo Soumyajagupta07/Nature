@@ -1,15 +1,14 @@
 import React from 'react';
-import saplings from '../images/Nature/Sapling.jpg'
+import Menu from './Menu';
+import MainContent from './MainContent';
 
-function Home() {
-  return (
-    <div className="mainPic">
-      <img src={saplings} alt="sapling" />
-      <div className="overview">
-        <p>Anything and Everything to MAKE and MAINTAIN your Garden ...</p>
+function Home(){
+    return(
+        <div className='body'>
+      <Menu />
+      <MainContent/>
       </div>
-    </div>
-  );
+    )
 }
 
 export default Home;

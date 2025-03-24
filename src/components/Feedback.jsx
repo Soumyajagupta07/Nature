@@ -1,8 +1,11 @@
 import React from 'react';
 import '../styles/feedback.css';
-
+import Menu from './Menu'
+ 
 const Feedback = () => {
   return (
+    <div className='mainfeedback'>
+      <Menu/>
     <div className="feedback">
       <h2>Feedback</h2>
       <p>We value your feedback and suggestions. Please let us know how we can improve.</p>
@@ -24,7 +27,8 @@ const Feedback = () => {
         </p>
       </form>
     </div>
+    </div>
   );
 };
-
+ 
 export default Feedback;

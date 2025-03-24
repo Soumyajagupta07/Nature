@@ -1,0 +1,52 @@
+.body{
+    display:flex;  
+}
+
+
+.overview{
+    position: absolute;
+    top: 270px;
+    left: 400px;
+    width: 25%;
+    height:auto;
+}
+.overview p{
+    font-size: 2em;
+    font-family: Segoe Print;
+}
+
+  .image-container{
+    position: relative;
+    width:90%;
+    height: auto;
+    float: left;
+    padding: 7px 5px 5px 5px;
+  }
+   
+  .image-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust width for better alignment */
+    text-align: center;
+    color: white;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+@media only screen and (min-width: 768px) {
+    
+    .mainPic {width: 100%;}
+}
+
+.mainPic img{
+    position: relative;
+    width:100%;
+    height: auto;
+    float: left;
+    padding: 7px 5px 5px 5px;
+}

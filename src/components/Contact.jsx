@@ -1,8 +1,11 @@
 import React from 'react';
 import '../styles/contact.css';
-
+import Menu from './Menu'
+ 
 const Contact = () => {
   return (
+    <div className='maincontact'>
+      <Menu/>
     <div className="contact">
       <h2>Contact Us</h2>
       <p>If you have any questions or need assistance, feel free to reach out to us.</p>
@@ -24,7 +27,8 @@ const Contact = () => {
         </p>
       </form>
     </div>
+    </div>
   );
 };
-
+ 
 export default Contact;

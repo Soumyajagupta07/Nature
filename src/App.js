@@ -1,18 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Menu from './components/Menu';
-import MainPic from './components/MainPic';
 import Contact from './components/Contact';
 import Feedback from './components/Feedback';
 import Footer from './components/Footer';
-import Product from './components/Product';
-import About from './components/About';
-import LoginPage from './components/login'; 
-import Home from './components/Home'; 
 import Cart from './components/Cart';
+import Product from './components/Product';
+import Home from './components/Home';
+import About from './components/About';
+import LoginPage from './components/login';
+import ShippingPolicy from './components/ShippingPolicy';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import FAQ from './components/FAQ';
+import Terms from './components/Terms';
+import Specials from './components/Specials';
+import NewProducts from './components/NewProducts';
+import BestSellers from './components/BestSeller';
+import Stores from './components/Stores';
 import appleBonsai from './images/Bonsai/Apple1.jpg';
 import mangoBonsai from './images/Bonsai/Mango.jpg';
 import grapeBonsai from './images/Bonsai/Grapes.jpg';
@@ -21,6 +26,8 @@ import bodhiBonsai from './images/Bonsai/Bodhi.jpg';
 import azaleaBonsai from './images/Bonsai/Azalea.jpg';
 import mandarinCoolieHatBonsai from './images/Bonsai/MandarinCoolieHat.jpg';
 import hibiscusBonsai from './images/Bonsai/Hibiscus.jpg';
+import './styles/style.css';
+import './styles/footerCompo.css';
 
 const products = [
   { image: appleBonsai, name: "Apple", link: "/appleBonsai" },
@@ -41,26 +48,27 @@ const routes = [
   { path: "/bodhiBonsai", element: <Product name="Bodhi Bonsai" image={bodhiBonsai} /> },
 ];
 
-const App = () => {
-  
-    const [cartItems, setCartItems] = useState(products);
-  return(
+const App = () => (
   <Router>
     <div className="container">
       <Header />
       <Nav />
-      <div className='MenuMainPic'>
-      <Menu />
-      <MainPic />
-      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/product" element={<Product products={products} />} />
+        {/* <Route path="/product" element={<Product />} /> */}
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} /> 
+        <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<Feedback />} />
-        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+        <Route path="/shipping-policy" element={<ShippingPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/specials" element={<Specials />} />
+        <Route path="/new-products" element={<NewProducts />} />
+        <Route path="/best-sellers" element={<BestSellers />} />
+        <Route path="/stores" element={<Stores />} />
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
@@ -68,7 +76,6 @@ const App = () => {
       <Footer />
     </div>
   </Router>
-  )
-};
+);
 
 export default App;
