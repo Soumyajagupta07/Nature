@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    max-width: 800px; /* Increased width to accommodate side-by-side layout */
+    max-width: 800px; 
     margin: 0 auto;
   }
   
@@ -65,3 +65,67 @@
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+  /* .loginBlock {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h3 {
+    font-size: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .authForms {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .createAccount, .alreadyUser {
+    width: 48%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  } */

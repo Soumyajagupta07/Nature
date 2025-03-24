@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
+import Menu from './Menu';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ const LoginPage = () => {
 
   return (
     <div className="loginBlock">
+      <Menu/>
       <h3>AUTHENTICATION</h3>
       <div className="createAccount">
         <form>
